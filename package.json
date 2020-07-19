@@ -7,7 +7,7 @@
     "dist"
   ],
   "scripts": {
-    "all": "npm-run-all --sequential build lint cover",
+    "all": "npm-run-all --sequential build lint cover:report",
     "lint": "xo",
     "lint:fix": "xo --fix",
     "test": "ava --verbose",
