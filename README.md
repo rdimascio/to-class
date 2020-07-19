@@ -1,17 +1,17 @@
-# Blueprint
+# to-class
 
-[![Build status](https://img.shields.io/travis/rdimascio/blueprint/master?style=flat-square)](https://travis-ci.org/rdimascio/blueprint)
-[![Coverage](https://img.shields.io/coveralls/github/rdimascio/blueprint/master?style=flat-square)](https://coveralls.io/github/rdimascio/blueprint?branch=master)
-[![npm version](https://img.shields.io/npm/v/blueprint?style=flat-square)](https://www.npmjs.com/package/blueprint)
+[![Build status](https://img.shields.io/travis/rdimascio/to-class/master?style=flat-square)](https://travis-ci.org/rdimascio/to-class)
+[![Coverage](https://img.shields.io/coveralls/github/rdimascio/to-class/master?style=flat-square)](https://coveralls.io/github/rdimascio/to-class?branch=master)
+[![npm version](https://img.shields.io/npm/v/to-class?style=flat-square)](https://www.npmjs.com/package/to-class)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue?style=flat-square)](https://www.paypal.me/rdimascio/5)
 
-A blueprint for your next npm package.
+Builds a string of deduplicated classNames using whatever you can throw at it.
 
 ```ssh
-npm install blueprint
+npm install to-class
 ```
 
-## What is Blueprint?
+## What is to-class?
 
 Add some details about your package. What problems it solves, what it helps to accomplish, etc.
 

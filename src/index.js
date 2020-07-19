@@ -57,7 +57,7 @@ export default (function () {
 			}
 		});
 
-		return '👋';
+		return [...CLASS_NAMES].join(' ');
 	};
 
 	return toClass;
