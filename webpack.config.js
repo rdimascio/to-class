@@ -1,7 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
 	target: 'web',
@@ -15,7 +14,7 @@ module.exports = {
 		path.resolve(__dirname, 'src/index.js')
 	],
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist/polyfill'),
 		filename: 'index.js',
 		libraryTarget: 'umd',
 		library: 'to-class',
@@ -32,8 +31,5 @@ module.exports = {
 				loader: 'babel-loader'
 			}
 		]
-	},
-	plugins: [
-		new CleanWebpackPlugin()
-	]
+	}
 };

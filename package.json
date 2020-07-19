@@ -1,6 +1,6 @@
 {
   "name": "to-class",
-  "version": "0.0.0-development",
+  "version": "1.1.0",
   "description": "",
   "main": "dist/index.js",
   "files": [
@@ -13,7 +13,9 @@
     "test": "ava --verbose",
     "cover": "nyc npm run test",
     "cover:report": "nyc report --reporter=text-lcov | coveralls",
-    "build": "npx webpack --mode production"
+    "build": "npm-run-all build:lib build:polyfill",
+    "build:lib": "npx rimraf dist && npx babel --plugins '@babel/plugin-transform-modules-umd' src/index.js --out-file ./dist/index.js --no-comments --source-maps",
+    "build:polyfill": "npx webpack --mode production"
   },
   "browserslist": [
     "> 1%",
@@ -72,7 +74,6 @@
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
     "browser-env": "^3.3.0",
-    "clean-webpack-plugin": "^3.0.0",
     "commitizen": "^4.1.2",
     "coveralls": "^3.1.0",
     "cz-conventional-changelog": "^3.2.0",
