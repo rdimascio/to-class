@@ -1,5 +1,5 @@
 {
-  "name": "blueprint",
+  "name": "to-class",
   "version": "0.0.0-development",
   "description": "",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "all": "npm-run-all --sequential build lint cover",
     "lint": "xo",
     "lint:fix": "xo --fix",
-    "test": "ava",
+    "test": "ava --verbose",
     "cover": "nyc npm run test",
     "cover:report": "nyc report --reporter=text-lcov | coveralls",
     "build": "babel --plugins '@babel/plugin-transform-modules-umd' src/index.js --out-file ./dist/index.js --no-comments --source-maps"
@@ -39,20 +39,24 @@
     ],
     "all": true
   },
+  "ava": {
+    "require": ["esm"],
+    "nodeArguments": ["--experimental-modules"]
+  },
   "eslintConfig": {
     "extends": "eslint-config-xo"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rdimascio/blueprint.git"
+    "url": "https://github.com/rdimascio/to-class.git"
   },
   "keywords": [],
   "author": "Ryan DiMascio <ryan@dimasc.io> (https://ryan.dimasc.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rdimascio/blueprint.git/issues"
+    "url": "https://github.com/rdimascio/to-class.git/issues"
   },
-  "homepage": "https://github.com/rdimascio/blueprint.git#readme",
+  "homepage": "https://github.com/rdimascio/to-class.git#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
