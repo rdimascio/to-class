@@ -6,8 +6,8 @@ notifications:
   email: false
 node_js: 12
 before_script:
-  - npm prune
   - npm install
+  - npm prune
 script:
   - npm run build
 deploy:
