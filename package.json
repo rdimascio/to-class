@@ -1,5 +1,5 @@
 {
-  "name": "blueprint",
+  "name": "to-class",
   "version": "0.0.0-development",
   "description": "",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
     "test": "ava --verbose",
     "cover": "nyc npm run test",
     "cover:report": "nyc report --reporter=text-lcov | coveralls",
-    "build": "babel --plugins '@babel/plugin-transform-modules-umd' src/index.js --out-file ./dist/index.js --no-comments --source-maps"
+    "build": "npx webpack --mode production"
   },
   "browserslist": [
     "> 1%",
@@ -35,13 +35,17 @@
   },
   "nyc": {
     "include": [
-      "src/*.js"
+      "src/index.js"
     ],
     "all": true
   },
   "ava": {
-    "require": ["esm"],
-    "nodeArguments": ["--experimental-modules"]
+    "require": [
+      "esm"
+    ],
+    "nodeArguments": [
+      "--experimental-modules"
+    ]
   },
   "eslintConfig": {
     "extends": "eslint-config-xo"
@@ -65,8 +69,10 @@
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "ava": "^3.10.1",
+    "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
     "browser-env": "^3.3.0",
+    "clean-webpack-plugin": "^3.0.0",
     "commitizen": "^4.1.2",
     "coveralls": "^3.1.0",
     "cz-conventional-changelog": "^3.2.0",
@@ -78,6 +84,11 @@
     "npm-run-all": "^4.1.5",
     "nyc": "^15.1.0",
     "semantic-release": "^17.1.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
     "xo": "^0.32.1"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5"
   }
 }
