@@ -1,7 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 
-'use strict';
-
 /**
  * Copyright (c) 2018 Ryan DiMascio.
  * Licensed under the MIT License (MIT), see

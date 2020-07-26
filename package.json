@@ -13,9 +13,7 @@
     "test": "ava --verbose",
     "cover": "nyc npm run test",
     "cover:report": "nyc report --reporter=text-lcov | coveralls",
-    "build": "npm-run-all build:lib build:polyfill",
-    "build:lib": "npx rimraf dist && npx babel --plugins '@babel/plugin-transform-modules-umd' src/index.js --out-file ./dist/index.js --no-comments --source-maps",
-    "build:polyfill": "npx webpack --mode production"
+    "build": "npx rimraf ./dist && rollup -c"
   },
   "browserslist": [
     "> 1%",
@@ -54,15 +52,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rdimascio/to-class.git"
+    "url": "https://github.com/rdimascio/to-class"
   },
   "keywords": [],
   "author": "Ryan DiMascio <ryan@dimasc.io> (https://ryan.dimasc.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rdimascio/to-class.git/issues"
+    "url": "https://github.com/rdimascio/to-class/issues"
   },
-  "homepage": "https://github.com/rdimascio/to-class.git#readme",
+  "homepage": "https://github.com/rdimascio/to-class#readme",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
@@ -70,6 +68,9 @@
     "@babel/preset-env": "^7.10.4",
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
     "ava": "^3.10.1",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
@@ -84,9 +85,9 @@
     "lint-staged": "^10.2.11",
     "npm-run-all": "^4.1.5",
     "nyc": "^15.1.0",
+    "rollup": "^2.23.0",
+    "rollup-plugin-uglify": "^6.0.4",
     "semantic-release": "^17.1.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
     "xo": "^0.32.1"
   },
   "dependencies": {

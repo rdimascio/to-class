@@ -1,13 +1,10 @@
 {
-    "plugins": [
-        "@babel/plugin-transform-modules-umd"
-    ],
-    "presets": [
-        "@babel/preset-env"
-    ],
-    "env": {
-        "development": {
-            "sourceMaps": "inline"
-        }
-    }
+	"presets": ["@babel/preset-env"],
+	"env": {
+		"development": {
+			"sourceMaps": "inline"
+		}
+    },
+    "comments": false,
+    "sourceMaps": true
 }
