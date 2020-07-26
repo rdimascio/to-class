@@ -1,7 +1,7 @@
 {
   "name": "to-class",
-  "version": "0.0.0-development",
-  "description": "",
+  "version": "0.0.0-semantically-released",
+  "description": "Build a string of conditional, deduplicated classNames.",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -13,7 +13,8 @@
     "test": "ava --verbose",
     "cover": "nyc npm run test",
     "cover:report": "nyc report --reporter=text-lcov | coveralls",
-    "build": "npx rimraf ./dist && rollup -c"
+    "build": "npx rimraf ./dist && rollup -c",
+    "release": "npx semantic-release pre && npm publish && semantic-release post"
   },
   "browserslist": [
     "> 1%",
