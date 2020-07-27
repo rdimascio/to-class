@@ -1,5 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
-
 /**
  * Copyright (c) 2018 Ryan DiMascio.
  * Licensed under the MIT License (MIT), see
@@ -23,7 +21,7 @@
  * toClass({foo: true, bar: false}); // => 'foo'
  * toClass({foo: true, bar: true}, [baz, bar], 'foo'); // => 'foo bar baz'
  */
-export default (...args) => {
+const toClass = (...args) => {
 	const CLASS_NAMES = new Set();
 
 	/**
@@ -69,3 +67,5 @@ export default (...args) => {
 
 	return Array.from(CLASS_NAMES).join(' ');
 };
+
+export default toClass;

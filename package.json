@@ -3,6 +3,8 @@
   "version": "0.0.0-development",
   "description": "Build a string of conditional, deduplicated classNames.",
   "main": "dist/index.js",
+  "module": "dist/index.m.js",
+  "unpkg": "dist/index.min.js",
   "files": [
     "dist"
   ],
