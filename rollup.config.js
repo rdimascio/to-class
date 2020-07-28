@@ -70,12 +70,12 @@ const libWeb = {
 	input: [path.resolve(__dirname, 'src/index.js')]
 };
 
-const polyfillUmd = {
+const polyfill = {
 	...baseConfig,
-	input: [path.resolve(__dirname, 'src/polyfill/index.js')],
+	input: [path.resolve(__dirname, 'src/polyfill.js')],
 	output: {
 		...baseUmd.output,
-		file: 'dist/polyfill/index.min.js'
+		file: 'dist/polyfill.min.js'
 	},
 	plugins: [
 		nodeResolve(),
@@ -86,21 +86,4 @@ const polyfillUmd = {
 	]
 };
 
-const polyfillWeb = {
-	...baseConfig,
-	input: [path.resolve(__dirname, 'src/polyfill/index.js')],
-	output: [
-		{
-			...baseConfig.output,
-			file: 'dist/polyfill/index.js',
-			format: 'cjs'
-		},
-		{
-			...baseConfig.output,
-			file: 'dist/polyfill/index.m.js',
-			format: 'es'
-		}
-	]
-};
-
-export default [libUmd, libWeb, polyfillUmd, polyfillWeb];
+export default [libUmd, libWeb, polyfill];
